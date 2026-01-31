@@ -4,55 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Expense Splitter</title>
-    <link rel="stylesheet" href="addnew.css">
+    <link rel="stylesheet" href="style.css">
+     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="min-h-screen bg-[#efede7] text-[#2f3e2e] font-sans">
     <!--navbar-->
-    <header>
-        <h1>Smart Expense Splitter</h1>
-        <div>
-        <section>
-        <button>Home</button>
-        <button>Members</button>
-        <button>Add Expense</button>
-        <button>Split Calculator</button>
-        <button>Balances</button>
-        <button>Home</button>
-        </section>
-        </header>
+    <nav class="bg-[#f5f3ee] border-b border-[#d6d2c4]">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex flex-col gap-4">
 
-      <!--add new-->
-      <main>
-      <section>
-      <h2>Add New Expense</h2>
-      <form id="expenceForm">
-        <label>Expense Description *</label>
-        <input type="text"id="description" placeholder="e.g.,Lunch,Fuel,Hotel Booking" required>
-        <label>Amount (₹) *</label>
-        <input type="number" id="amount" placeholder="0.00" required>
-        <label>Paid By *</label>
-        <select id="paidBy" required>
-        <option value="">Select who paid</option>
-        <option value="Vyshali"></option>
-        <option value="Shynie"></option>
-        <option value="Kishore"></option>
+        <!-- Top Row -->
+        <div class="flex items-center justify-between">
+          <h1 class="text-2xl font-extrabold text-[#556b2f] flex items-center gap-2">
+            💰 Smart Expense Splitter
+          </h1>
+          <span class="text-sm text-[#6b705c]">Group</span>
+        </div>
 
+        <!-- Navigation -->
+        <div class="flex flex-wrap gap-2">
+          <button class="px-4 py-2 rounded-lg bg-[#e6e2d8] text-[#4a5d23] hover:bg-[#dcd6c6] transition">
+            🏠 Home
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-[#e6e2d8] text-[#4a5d23] hover:bg-[#dcd6c6] transition">
+            👥 Members
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-[#6b8e23] text-white font-semibold">
+            ➕ Add Expense
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-[#e6e2d8] text-[#4a5d23] hover:bg-[#dcd6c6] transition">
+            🧮 Split Calculator
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-[#e6e2d8] text-[#4a5d23] hover:bg-[#dcd6c6] transition">
+            💳 Balances
+          </button>
+          <button class="px-4 py-2 rounded-lg bg-[#e6e2d8] text-[#4a5d23] hover:bg-[#dcd6c6] transition">
+            📊 History
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+      <main class="max-w-[800px] mx-auto mt-8 p-6 bg-white text-[#556B2F] rounded-xl shadow-lg">
+
+  <section>
+    <h2 class="mb-4 text-2xl font-extrabold text-[#556B2F]">Add New Expense</h2>
+
+    <form id="expenseForm" class="space-y-4">
+
+      <div>
+        <label class="block font-bold mb-1">Expense Description *</label>
+        <input type="text" id="description" required
+          class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-[#556B2F]"
+          placeholder="e.g., Lunch, Fuel, Hotel Booking" />
+      </div>
+
+      <div>
+        <label class="block font-bold mb-1">Amount (₹) *</label>
+        <input type="number" id="amount" required
+          class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-[#556B2F]"
+          placeholder="0.00" />
+      </div>
+
+      <div>
+        <label class="block font-bold mb-1">Paid By *</label>
+        <select id="paidBy" required
+          class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-[#556B2F]">
+          <option value="">Select who paid</option>
+          <option value="Vyshali">Vyshali</option>
+          <option value="Shynie">Shynie</option>
+          <option value="Kishore">Kishore</option>
         </select>
-        <label>Date</label>
-        <input type="date" id="date">
-        <label>Note(Optional)</label>
-        <textarea id="notes" placeholder="Optional note"></textarea>
-        <button type="submit">Add Expense</button>
+      </div>
+
+      <div>
+        <label class="block font-bold mb-1">Date</label>
+        <input type="date" id="date"
+          class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-[#556B2F]" />
+      </div>
+
+      <div>
+        <label class="block font-bold mb-1">Note (Optional)</label>
+        <textarea id="notes"
+          class="w-full p-2 border border-gray-300 rounded-md focus:ring focus:ring-[#556B2F]"
+          placeholder="Optional note"></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-[#556B2F] text-white py-3 rounded-lg font-bold hover:bg-[#EFEDE7] hover:text-[#556B2F] transition">
+        Add Expense
+      </button>
 
     </form>
+
+    <section id="expenseList" class="mt-8"></section>
+  </section>
+
+</main>
+
     <section id="expenseList" style="margin-top:2rem;"></section>
 
     </section>
-
-
-      
-
-        
 
         </main>
         </script>
@@ -60,10 +114,3 @@
     
     </body>
     </html>
-
-
-
-
-
-
-
