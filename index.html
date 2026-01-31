@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Expense Splitter</title>
+    <link rel="stylesheet" href="addnew.css">
+</head>
+<body>
+    <!--navbar-->
+    <header>
+        <h1>Smart Expense Splitter</h1>
+        <div>
+        <section>
+        <button>Home</button>
+        <button>Members</button>
+        <button>Add Expense</button>
+        <button>Split Calculator</button>
+        <button>Balances</button>
+        <button>Home</button>
+        </section>
+        </header>
+
+      <!--add new-->
+      <main>
+      <section>
+      <h2>Add New Expense</h2>
+      <form id="expenceForm">
+        <label>Expense Description *</label>
+        <input type="text"id="description" placeholder="e.g.,Lunch,Fuel,Hotel Booking" required>
+        <label>Amount (₹) *</label>
+        <input type="number" id="amount" placeholder="0.00" required>
+        <label>Paid By *</label>
+        <select id="paidBy" required>
+        <option value="">Select who paid</option>
+        <option value="Vyshali"></option>
+        <option value="Shynie"></option>
+        <option value="Kishore"></option>
+
+        </select>
+        <label>Date</label>
+        <input type="date" id="date">
+        <label>Note(Optional)</label>
+        <textarea id="notes" placeholder="Optional note"></textarea>
+        <button type="submit">Add Expense</button>
+
+    </form>
+    <section id="expenseList" style="margin-top:2rem;"></section>
+
+    </section>
+
+
+      
+
+        
+
+        </main>
+        </script>
+<script src="addnew.js"></script>
+    
+    </body>
+    </html>
+
+
+
+
+
+
+
